@@ -5,14 +5,15 @@ body {
   background-color: #E8F3D6;
   margin: 0;
   padding: 0;
-  max-width: 1920px;
   color: black;
 }
+
 h1 {
   text-align: center;
   font-size: 40px;
   line-height: 1;
 }
+
 *,
 *:before,
 *:after {
@@ -20,14 +21,24 @@ h1 {
 }
 
 .wraper {
-width: 100%;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.meme_holder {}
+
+.wraper:hover .meme_title {
+  background-image: url(assets/plus-solid.svg);
+  color: #5646eb;
+}
+
+.wraper:hover .meme_input:checked~.meme_title {
+  background-image: url(assets/xmark-solid.svg);
+  color: black;
+}
 
 
-}
-.meme_holder {
-width: 50%;
-margin: 0 25%;
-}
 
 .meme_item {
   border: 1px solid #747373;
@@ -46,13 +57,24 @@ margin: 0 25%;
 }
 
 .meme_input:checked~.meme_content {
-  display: block;
+  height: auto;
+}
+
+.meme_holder:hover .meme_title {
+  background-color: #FCF9BE;
+}
+
+.meme_holder:hover .meme_content {
+  height: auto;
 }
 
 .meme_title {
   display: block;
   cursor: pointer;
   transition: background .2s ease-out;
+  background-position: right 2% center;
+  background-repeat: no-repeat;
+
 }
 
 .meme_title:hover {
@@ -60,11 +82,15 @@ margin: 0 25%;
 }
 
 .meme_content {
-  display: none;
-  
+  display: block;
+  height: 0;
+  cursor: pointer;
+  transition: all .5s ease-out;
+  overflow: hidden;
+
 }
 
 .meme {
   width: 100%;
-  
+
 }
