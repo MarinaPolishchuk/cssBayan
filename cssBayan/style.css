@@ -1,7 +1,7 @@
 body {
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.5;
   background-color: #E8F3D6;
   margin: 0;
   padding: 0;
@@ -21,9 +21,9 @@ h1 {
 }
 
 .wraper {
-  width: 60%;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 3%;
+
 }
 
 .meme_holder {}
@@ -38,11 +38,12 @@ h1 {
   color: black;
 }
 
-
-
 .meme_item {
-  border: 1px solid #747373;
+  /* border-bottom: 1px solid #747373; */
+}
 
+.meme_holder:last-child .meme_item {
+  border-bottom: none;
 }
 
 .meme_input {
@@ -70,11 +71,15 @@ h1 {
 
 .meme_title {
   display: block;
+  padding: 2% 7% 2% 3%;
   cursor: pointer;
   transition: background .2s ease-out;
   background-position: right 2% center;
   background-repeat: no-repeat;
-
+  background-size: 1rem;
+  background-color: #fcfadb;
+  border-radius: 10px;
+  margin: 1% 0;
 }
 
 .meme_title:hover {
@@ -87,10 +92,29 @@ h1 {
   cursor: pointer;
   transition: all .5s ease-out;
   overflow: hidden;
-
 }
 
 .meme {
   width: 100%;
+}
 
+/* Tablet */
+@media screen and (min-width: 820px) {
+  .wraper {
+    padding: 0 5%;
+    font-size: 18px;
+  }
+}
+
+
+/* Desktop */
+@media screen and (min-width: 1180px) {
+
+  .wraper {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 5%;
+    min-width: 1000px;
+    font-size: 20px;
+  }
 }
