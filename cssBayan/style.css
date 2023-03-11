@@ -1,0 +1,70 @@
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  background-color: #E8F3D6;
+  margin: 0;
+  padding: 0;
+  max-width: 1920px;
+  color: black;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  line-height: 1;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.wraper {
+width: 100%;
+
+
+}
+.meme_holder {
+width: 50%;
+margin: 0 25%;
+}
+
+.meme_item {
+  border: 1px solid #747373;
+
+}
+
+.meme_input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+}
+
+.meme_input:checked~.meme_title {
+  background-color: #FCF9BE;
+}
+
+.meme_input:checked~.meme_content {
+  display: block;
+}
+
+.meme_title {
+  display: block;
+  cursor: pointer;
+  transition: background .2s ease-out;
+}
+
+.meme_title:hover {
+  background-color: #FCF9BE;
+}
+
+.meme_content {
+  display: none;
+  
+}
+
+.meme {
+  width: 100%;
+  
+}
